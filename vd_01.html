@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг мясных блюд</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f5f0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8b4513;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #8b4513;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5e7d9;
+        }
+
+        .rating {
+            font-weight: bold;
+        }
+
+        .rating-high {
+            color: #4CAF50;
+        }
+
+        .rating-medium {
+            color: #FFC107;
+        }
+
+        .rating-low {
+            color: #F44336;
+        }
+
+        img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        a {
+            color: #8b4513;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #5e2d07;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мой рейтинг мясных блюд</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Название блюда</th>
+                <th>Оценка (1-10)</th>
+                <th>Рецепт</th>
+                <th>Фото</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Свинина, тушенная с овощами в томатном соусе</td>
+                <td class="rating rating-high">9</td>
+                <td><a href="https://www.russianfood.com/recipes/recipe.php?rid=164052" target="_blank">Рецепт на RussianFood.com</a></td>
+                <td><img src="https://img1.russianfood.com/dycontent/images_upl/541/big_540757.jpg" alt="Свинина тушеная с овощами"></td>
+            </tr>
+            <tr>
+                <td>Шашлык из свиной шейки с луком</td>
+                <td class="rating rating-high">10</td>
+                <td><a href="https://www.iamcook.ru/showrecipe/3048" target="_blank">Рецепт на IamCook.ru</a></td>
+                <td><img src="https://img.iamcook.ru/old/upl/recipes/cat/u-0b0163ac02a2094f76148b13624b6144.jpg" alt="Шашлык из свиной шейки с луком"></td>
+            </tr>
+            <tr>
+                <td>Куриные рулетики с сыром</td>
+                <td class="rating rating-medium">9</td>
+                <td><a href="https://www.russianfood.com/recipes/recipe.php?rid=144090" target="_blank">Рецепт на RussianFood.com</a></td>
+                <td><img src="https://img1.russianfood.com/dycontent/images_upl/233/big_232644.jpg" alt="Куриные рулетики с сыром"></td>
+            </tr>
+            <tr>
+                <td>Мясо по-французски в духовке</td>
+                <td class="rating rating-low">10</td>
+                <td><a href="https://www.iamcook.ru/showrecipe/7487" target="_blank">Рецепт на IamCook.ru</a></td>
+                <td><img src="https://img.iamcook.ru/old/upl/recipes/cat/u-86abe9cee7693d92223792997c78d3a9.jpg" alt="Мясо по-французски в духовке"></td>
+            </tr>
+            <tr>
+                <td>Говяжий стейк на гриле</td>
+                <td class="rating rating-high">10</td>
+                <td><a href="https://www.russianfood.com/recipes/recipe.php?rid=129207" target="_blank">Рецепт на RussianFood.com</a></td>
+                <td><img src="https://img1.russianfood.com/dycontent/images_upl/85/big_84593.jpg" alt="Говяжий стейк на гриле"></td>
+            </tr>
+            <tr>
+                <td>Жаркое по-деревенски</td>
+                <td class="rating rating-high">10</td>
+                <td><a href="https://www.russianfood.com/recipes/recipe.php?rid=159506" target="_blank">Рецепт на RussianFood.com</a></td>
+                <td><img src="https://img1.russianfood.com/dycontent/images_upl/465/big_464858.jpg" alt="Жаркое по-деревенски"></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>Создано с любовью к мясным блюдам © 2025</p>
+    </div>
+</body>
+</html>
