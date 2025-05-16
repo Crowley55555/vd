@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Киберкоролевство - Блог о технологиях будущего</title>
+    <meta name="description" content="Официальный блог Киберкоролевства - новости о кибертехнологиях, VR, нейроинтерфейсах и жизни в цифровом государстве будущего">
+    <meta name="keywords" content="кибертехнологии, виртуальная реальность, нейроинтерфейсы, будущее, цифровое государство, киберкоролевство">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Иконки Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-dark text-white">
+    <!-- Шапка сайта -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-opacity-75 mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="color: #00ffe7; text-shadow: 0 0 10px #00ffe7;">
+                КиберКоролевство
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Главная</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link active" href="/blog/">Блог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contacts/">Как нас найти</a>
+                    </li>
+                </ul>
+                <!-- Блок с датой и временем -->
+                <div class="d-flex align-items-center ms-3">
+                    <div class="text-white text-end" style="text-shadow: 0 0 5px #00ffe7;">
+                        <div id="current-time" class="fw-bold">{{ datetime.time }}</div>
+                        <div id="current-date" class="small">{{ datetime.date }}</div>
+                        <div class="small text-white-50">{{ datetime.timezone }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container mb-5">
+        <!-- Заголовок страницы -->
+        <div class="text-center mb-5 py-4" style="border-bottom: 1px solid rgba(0, 255, 231, 0.3);">
+            <h1 class="display-4 fw-bold" style="color: #00ffe7; text-shadow: 0 0 15px #00ffe7;">Блог Киберкоролевства</h1>
+            <p class="lead">Новости, исследования и мысли о технологиях будущего</p>
+        </div>
+
+        <!-- Фильтры и поиск -->
+        <div class="row mb-5">
+            <div class="col-md-6 mb-3">
+                <div class="input-group">
+                    <span class="input-group-text bg-dark border-info text-white"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control bg-dark text-white border-info" placeholder="Поиск по блогу..." aria-label="Поиск">
+                    <button class="btn btn-outline-info" type="button">Найти</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap justify-content-md-end gap-2">
+                    <button class="btn btn-outline-info active">Все темы</button>
+                    <button class="btn btn-outline-info">VR/AR</button>
+                    <button class="btn btn-outline-info">Нейроинтерфейсы</button>
+                    <button class="btn btn-outline-info">Квант. вычисления</button>
+                    <button class="btn btn-outline-info">Жизнь в CK</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Основные статьи -->
+        <div class="row g-4">
+            <!-- Статья 1 -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+                    <div class="card-header border-info d-flex justify-content-between align-items-center">
+                        <span class="badge bg-info text-dark">Новое</span>
+                        <small class="text-white-50">15 мая 2156</small>
+                    </div>
+                    <img src="../static/image/blog_1.jpg" class="card-img-top" alt="Нейроинтерфейсы нового поколения">
+                    <div class="card-body">
+                        <h2 class="card-title" style="color: #00ffe7;">Нейроинтерфейсы 8-го поколения: прорыв в коммуникации</h2>
+                        <p class="card-text">Сегодня Совет Десяти одобрил массовое внедрение нейроинтерфейсов нового поколения, позволяющих передавать не только мысли, но и эмоции, воспоминания и даже сны...</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-dark text-info border border-info">Нейротехнологии</span>
+                            <span class="badge bg-dark text-info border border-info">Инновации</span>
+                            <span class="badge bg-dark text-info border border-info">Коммуникация</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-info">Читать далее <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="card-footer border-info text-white-50 d-flex justify-content-between">
+                        <span><i class="bi bi-person-fill"></i> Автор: Кира Вольтовна</span>
+                        <span><i class="bi bi-chat-left-text"></i> 42 комментария</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 2 -->
+            <div class="col-lg-6">
+                <div class="card h-100 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+                    <div class="card-header border-info d-flex justify-content-between align-items-center">
+                        <span class="badge bg-info text-dark">Популярное</span>
+                        <small class="text-white-50">10 мая 2156</small>
+                    </div>
+                    <img src="../static/image/blog_2.jpg" class="card-img-top" alt="Виртуальные миры Киберкоролевства">
+                    <div class="card-body">
+                        <h2 class="card-title" style="color: #00ffe7;">ТОП-5 виртуальных миров для отдыха в этом сезоне</h2>
+                        <p class="card-text">Наши эксперты протестировали 127 новых VR-вселенных и выбрали лучшие для вашего цифрового отпуска. От тропических пляжей с розовым песком до космических отелей на орбите нейтронной звезды...</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-dark text-info border border-info">VR</span>
+                            <span class="badge bg-dark text-info border border-info">Отдых</span>
+                            <span class="badge bg-dark text-info border border-info">Рейтинги</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-info">Читать далее <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="card-footer border-info text-white-50 d-flex justify-content-between">
+                        <span><i class="bi bi-person-fill"></i> Автор: Тайрос Блескоглаз</span>
+                        <span><i class="bi bi-chat-left-text"></i> 78 комментариев</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+                    <img src="../static/image/blog_3.jpg" class="card-img-top" alt="Квантовые компьютеры">
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #00ffe7;">Квантовый суперкомпьютер "Хранитель-X" побил все рекорды</h3>
+                        <p class="card-text">Новый квантовый процессор с 512 кубитами решил задачу, на которую у обычных компьютеров ушло бы 10 миллиардов лет...</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-dark text-info border border-info">Квант. вычисления</span>
+                            <span class="badge bg-dark text-info border border-info">Наука</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-info btn-sm">Читать далее <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="card-footer border-info text-white-50 d-flex justify-content-between">
+                        <small>8 мая 2156</small>
+                        <small><i class="bi bi-chat-left-text"></i> 15</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+                    <img src="../static/image/blog_4.jpg" class="card-img-top" alt="Бионические импланты">
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #00ffe7;">Бионические импланты нового поколения: обзор</h3>
+                        <p class="card-text">Мы протестировали 12 новых моделей бионических конечностей с нейросенсорной обратной связью. Какие из них стоят своих денег?</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-dark text-info border border-info">Бионика</span>
+                            <span class="badge bg-dark text-info border border-info">Гаджеты</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-info btn-sm">Читать далее <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="card-footer border-info text-white-50 d-flex justify-content-between">
+                        <small>5 мая 2156</small>
+                        <small><i class="bi bi-chat-left-text"></i> 23</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+                    <img src="../static/image/blog_5.jpg" class="card-img-top" alt="Кибербезопасность">
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #00ffe7;">Новые угрозы кибербезопасности: отчет за квартал</h3>
+                        <p class="card-text">Аналитический отдел опубликовал отчет о новых видах кибератак и методах защиты от них. Что нужно знать каждому жителю Киберкоролевства?</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-dark text-info border border-info">Безопасность</span>
+                            <span class="badge bg-dark text-info border border-info">Аналитика</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-info btn-sm">Читать далее <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="card-footer border-info text-white-50 d-flex justify-content-between">
+                        <small>1 мая 2156</small>
+                        <small><i class="bi bi-chat-left-text"></i> 17</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+                    <img src="../static/image/blog_6.jpg" class="card-img-top" alt="Космические технологии">
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #00ffe7;">Как наши гравитационные двигатели изменили космические путешествия</h3>
+                        <p class="card-text">Интервью с главным инженером проекта "Гравитон" о том, как работают новые двигатели и какие перспективы они открывают.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-dark text-info border border-info">Космос</span>
+                            <span class="badge bg-dark text-info border border-info">Технологии</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-info btn-sm">Читать далее <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="card-footer border-info text-white-50 d-flex justify-content-between">
+                        <small>28 апреля 2156</small>
+                        <small><i class="bi bi-chat-left-text"></i> 31</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 7 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+                    <img src="../static/image/blog_7.jpg" class="card-img-top" alt="Цифровая архитектура">
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #00ffe7;">Архитектура будущего: как строят в Неонграде</h3>
+                        <p class="card-text">Экскурсия по новым районам столицы, где здания меняют форму в зависимости от времени суток и настроения жителей.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-dark text-info border border-info">Архитектура</span>
+                            <span class="badge bg-dark text-info border border-info">Города</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-info btn-sm">Читать далее <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="card-footer border-info text-white-50 d-flex justify-content-between">
+                        <small>25 апреля 2156</small>
+                        <small><i class="bi bi-chat-left-text"></i> 12</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Статья 8 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+                    <img src="../static/image/blog_8.jpg" class="card-img-top" alt="Искусственный интеллект">
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #00ffe7;">ИИ-поэт "Лира" выпустил новый сборник стихов</h3>
+                        <p class="card-text">Нейросеть, обученная на всей мировой поэзии, создала сборник, который тронул даже самых строгих критиков. Читаем и обсуждаем.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-dark text-info border border-info">ИИ</span>
+                            <span class="badge bg-dark text-info border border-info">Искусство</span>
+                        </div>
+                        <a href="#" class="btn btn-outline-info btn-sm">Читать далее <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="card-footer border-info text-white-50 d-flex justify-content-between">
+                        <small>20 апреля 2156</small>
+                        <small><i class="bi bi-chat-left-text"></i> 45</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Подписка на блог -->
+        <div class="card mt-5 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+            <div class="card-body text-center py-4">
+                <h3 class="card-title mb-3" style="color: #00ffe7;">Подпишитесь на обновления блога</h3>
+                <p class="card-text mb-4">Получайте самые свежие статьи о технологиях будущего прямо в ваш нейроинтерфейс</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-dark text-white border-info" placeholder="Ваш email или нейроадрес">
+                            <button class="btn btn-info text-dark" type="button">Подписаться</button>
+                        </div>
+                        <div class="form-check mt-3 text-start">
+                            <input class="form-check-input bg-dark border-info" type="checkbox" id="subscribeCheck" checked>
+                            <label class="form-check-label text-white-50" for="subscribeCheck">
+                                Я согласен получать уведомления о новых статьях
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer id="footer" class="py-4 mt-5" style="background-color: rgba(15, 12, 41, 0.8); backdrop-filter: blur(10px); border-top: 1px solid rgba(0, 255, 231, 0.3);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 style="color: #00ffe7;">Контакты</h5>
+                    <p><i class="bi bi-geo-alt-fill text-info"></i> Адрес: Виртуальный сектор 7, Киберкоролевство</p>
+                    <p><i class="bi bi-envelope-fill text-info"></i> Email: contact@cyberkingdom.net</p>
+                    <p><i class="bi bi-telephone-fill text-info"></i> Телепорт: 7-900-555-22-11</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 style="color: #00ffe7;">Наши соцсети</h5>
+                    <div class="mt-3">
+                        <a href="https://neuralink.com" class="btn btn-outline-info btn-sm rounded-pill m-1" target="_blank" style="border-color: #00ffe7; color: #00ffe7;">
+                            <i class="bi bi-cpu-fill"></i> NeuroLink
+                        </a>
+                        <a href="https://cyberspace.com" class="btn btn-outline-info btn-sm rounded-pill m-1" target="_blank" style="border-color: #00ffe7; color: #00ffe7;">
+                            <i class="bi bi-globe"></i> CyberSpace
+                        </a>
+                        <a href="https://quantumgram.io" class="btn btn-outline-info btn-sm rounded-pill m-1" target="_blank" style="border-color: #00ffe7; color: #00ffe7;">
+                            <i class="bi bi-shield-lock-fill"></i> QuantumGram
+                        </a>
+                        <a href="https://vrchat.com" class="btn btn-outline-info btn-sm rounded-pill m-1" target="_blank" style="border-color: #00ffe7; color: #00ffe7;">
+                            <i class="bi bi-vr"></i> VRChat
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2156 Киберкоролевство. Все цифровые права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Анимация карточек при наведении
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px)';
+            card.style.boxShadow = '0 10px 20px rgba(0, 255, 231, 0.4)';
+            if (card.querySelector('img')) {
+                card.querySelector('img').style.transform = 'scale(1.05)';
+            }
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+            card.style.boxShadow = '';
+            if (card.querySelector('img')) {
+                card.querySelector('img').style.transform = '';
+            }
+        });
+    });
+        // Динамическое обновление времени каждую секунду
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent =
+                now.toLocaleTimeString('ru-RU', {timeZone: '{{ datetime.timezone }}'});
+        }
+
+        // Обновляем сразу и запускаем таймер
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

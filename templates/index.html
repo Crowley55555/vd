@@ -10,34 +10,68 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 </head>
 <body class="bg-dark text-white">
-    <!-- Шапка сайта -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-opacity-75 mb-4">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#" style="color: #00ffe7; text-shadow: 0 0 10px #00ffe7;">
-                КиберКоролевство
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">О нас</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#users">Пользователи</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#footer">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
+    <!-- Шапка сайта -->
+<!-- Шапка сайта -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-opacity-75 mb-4">
+    <div class="container">
+        <!-- Логотип и бренд -->
+        <a class="navbar-brand fw-bold" href="#" style="color: #00ffe7; text-shadow: 0 0 10px #00ffe7;">
+            КиберКоролевство
+        </a>
+
+        <!-- Кнопка для мобильных устройств -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Основное меню -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Левая часть меню -->
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Галерея</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#users">Пользователи</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Контакты</a>
+                </li>
+            </ul>
+
+            <!-- Правая часть меню -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/">Блог</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacts/">Как нас найти</a>
+                </li>
+            </ul>
+            <!-- Блок с датой и временем -->
+                <div class="d-flex align-items-center ms-3">
+                    <div class="text-white text-end" style="text-shadow: 0 0 5px #00ffe7;">
+                        <div id="current-time" class="fw-bold">{{ datetime.time }}</div>
+                        <div id="current-date" class="small">{{ datetime.date }}</div>
+                        <div class="small text-white-50">{{ datetime.timezone }}</div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+        <!-- Кнопка для мобильной версии -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+</nav>
     <!-- Основной контент -->
     <main class="container mb-5">
         <!-- Секция 1: Слайдер с авто-прокруткой -->
@@ -392,6 +426,16 @@
             card.querySelector('img').style.transform = '';
         });
     });
+        // Динамическое обновление времени каждую секунду
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent =
+                now.toLocaleTimeString('ru-RU', {timeZone: '{{ datetime.timezone }}'});
+        }
+
+        // Обновляем сразу и запускаем таймер
+        updateTime();
+        setInterval(updateTime, 1000);
 </script>
 </body>
 </html>
