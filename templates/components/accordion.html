@@ -1,0 +1,106 @@
+{% macro info_accordion() %}
+<section>
+    <h2 class="text-center mb-4" style="color: #00ffe7; text-shadow: 0 0 10px #00ffe7;">Информация о Киберкоролевстве</h2>
+    <div class="accordion" id="infoAccordion">
+        <div class="accordion-item mb-3" style="
+            background: rgba(15, 12, 41, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 231, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        ">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" style="
+                    background: rgba(0, 255, 231, 0.1);
+                    color: #00ffe7;
+                    font-weight: 500;
+                ">
+                    <i class="bi bi-building me-2"></i> История создания
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#infoAccordion" style="
+                background: rgba(15, 12, 41, 0.4);
+            ">
+                <div class="accordion-body py-3" style="color: #e0e0e0;">
+                    Киберкоролевство было основано в 2045 году группой учёных и инженеров, искавших убежище от глобального кризиса. Первоначально это был подземный бункер, который постепенно превратился в высокотехнологичный город-государство.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item mb-3" style="
+            background: rgba(15, 12, 41, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 231, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        ">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" style="
+                    background: rgba(0, 255, 231, 0.1);
+                    color: #00ffe7;
+                    font-weight: 500;
+                ">
+                    <i class="bi bi-diagram-3 me-2"></i> Политическая система
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#infoAccordion" style="
+                background: rgba(15, 12, 41, 0.4);
+            ">
+                <div class="accordion-body py-3" style="color: #e0e0e0;">
+                    Управление осуществляется Советом Десяти, избираемым каждые 5 лет. Все законы проходят проверку ИИ-аналитиком на непротиворечивость. Важные решения принимаются путём цифрового референдума.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item mb-3" style="
+            background: rgba(15, 12, 41, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 231, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        ">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" style="
+                    background: rgba(0, 255, 231, 0.1);
+                    color: #00ffe7;
+                    font-weight: 500;
+                ">
+                    <i class="bi bi-cpu me-2"></i> Технологии
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#infoAccordion" style="
+                background: rgba(15, 12, 41, 0.4);
+            ">
+                <div class="accordion-body py-3" style="color: #e0e0e0;">
+                    Основные технологии: квантовые компьютеры, нейронные сети 7-го поколения, бионические импланты, гравитационные двигатели, нанорепликаторы материи и полная виртуальная реальность с тактильной обратной связью.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" style="
+            background: rgba(15, 12, 41, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 231, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        ">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" style="
+                    background: rgba(0, 255, 231, 0.1);
+                    color: #00ffe7;
+                    font-weight: 500;
+                ">
+                    <i class="bi bi-person-plus me-2"></i> Как присоединиться?
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#infoAccordion" style="
+                background: rgba(15, 12, 41, 0.4);
+            ">
+                <div class="accordion-body py-3" style="color: #e0e0e0;">
+                    Требования: возраст от 18 лет, техническое образование, прохождение теста на киберграмотность, отсутствие киберпреступлений в истории. Необходимо подать заявку через портал и получить одобрение Совета.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endmacro %} 

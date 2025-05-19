@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Киберкоролевство - Страница не найдена{% endblock %}
+
+{% block content %}
+    <div class="text-center py-5">
+        <h1 class="display-1 fw-bold" style="color: #00ffe7; text-shadow: 0 0 15px #00ffe7;">404</h1>
+        <h2 class="mb-4" style="color: #00ffe7;">Страница не найдена</h2>
+        <p class="lead mb-4">Похоже, вы попали в цифровую пустоту. Давайте вернёмся в безопасную зону.</p>
+        <a href="{{ url_for('start_page') }}" class="btn btn-outline-info btn-lg">
+            <i class="bi bi-house-door"></i> Вернуться на главную
+        </a>
+    </div>
+{% endblock %} 

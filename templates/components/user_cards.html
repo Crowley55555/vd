@@ -1,0 +1,19 @@
+{% macro user_card(image, name, description, email, city, status) %}
+<div class="col-lg-4 col-md-6">
+    <div class="card h-100 border-info bg-transparent"
+         style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3); transition: all 0.3s ease;">
+        <img src="../static/image/{{ image }}"
+             class="card-img-top p-2 rounded-3"
+             style="border: 2px solid #00ffe7; box-shadow: 0 0 10px #00ffe7; transition: all 0.3s ease;">
+        <div class="card-body">
+            <h5 class="card-title" style="color: #ffffff;">{{ name }}</h5>
+            <p class="card-text text-white-50">{{ description }}</p>
+            <ul class="list-group list-group-flush bg-transparent">
+                <li class="list-group-item bg-transparent text-light border-secondary">Email: {{ email }}</li>
+                <li class="list-group-item bg-transparent text-light border-secondary">Город: {{ city }}</li>
+                <li class="list-group-item bg-transparent text-light border-secondary">Статус: {{ status }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endmacro %} 

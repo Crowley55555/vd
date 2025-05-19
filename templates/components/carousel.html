@@ -1,0 +1,56 @@
+{% macro main_carousel() %}
+<section class="mb-5">
+    <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner rounded-3" style="box-shadow: 0 4px 15px rgba(0, 255, 231, 0.2);">
+            <div class="carousel-item active">
+                <img src="../static/image/1neongrad_serdce.jpg" class="d-block w-100" alt="Неонград">
+                <div class="carousel-caption d-none d-md-block rounded" style="background-color: rgba(0, 255, 231, 0.2); backdrop-filter: blur(5px);">
+                    <h5 style="color: #00ffe7; text-shadow: 0 0 5px #00ffe7;">Неонград</h5>
+                    <p>Сердце Киберкоролевства</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/image/2cosmopolis_gorod_sredi_zvezd.jpg" class="d-block w-100" alt="Космополис">
+                <div class="carousel-caption d-none d-md-block rounded" style="background-color: rgba(0, 255, 231, 0.2); backdrop-filter: blur(5px);">
+                    <h5 style="color: #00ffe7; text-shadow: 0 0 5px #00ffe7;">Космополис</h5>
+                    <p>Город среди звёзд</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/image/3cifrivaya_set.jpg" class="d-block w-100" alt="Цифровая сеть">
+                <div class="carousel-caption d-none d-md-block rounded" style="background-color: rgba(0, 255, 231, 0.2); backdrop-filter: blur(5px);">
+                    <h5 style="color: #00ffe7; text-shadow: 0 0 5px #00ffe7;">Цифровая сеть</h5>
+                    <p>Нервная система королевства</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/image/4ai_chranitel.jpg" class="d-block w-100" alt="Искусственный интеллект">
+                <div class="carousel-caption d-none d-md-block rounded" style="background-color: rgba(0, 255, 231, 0.2); backdrop-filter: blur(5px);">
+                    <h5 style="color: #00ffe7; text-shadow: 0 0 5px #00ffe7;">ИИ Хранитель</h5>
+                    <p>Защитник наших данных</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../static/image/5vr_miry.jpg" class="d-block w-100" alt="Виртуальная реальность">
+                <div class="carousel-caption d-none d-md-block rounded" style="background-color: rgba(0, 255, 231, 0.2); backdrop-filter: blur(5px);">
+                    <h5 style="color: #00ffe7; text-shadow: 0 0 5px #00ffe7;">VR Миры</h5>
+                    <p>Бесконечные возможности</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+{% endmacro %} 

@@ -1,0 +1,21 @@
+{% macro blog_post(image, title, description, date, author, comments, tags) %}
+<div class="card h-100 border-info bg-transparent" style="backdrop-filter: blur(10px); border: 1px solid rgba(0, 255, 231, 0.3);">
+    <div class="card-img-wrapper" style="height: 200px; overflow: hidden;">
+        <img src="{{ url_for('static', filename='image/' + image) }}" class="card-img-top h-100 w-100" alt="{{ title }}" style="object-fit: cover;">
+    </div>
+    <div class="card-body d-flex flex-column">
+        <h3 class="card-title" style="color: #00ffe7;">{{ title }}</h3>
+        <p class="card-text flex-grow-1">{{ description }}</p>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+            {% for tag in tags %}
+            <span class="badge bg-dark text-info border border-info">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        <a href="#" class="btn btn-outline-info btn-sm">Читать далее <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="card-footer border-info text-white-50 d-flex justify-content-between">
+        <small>{{ date }}</small>
+        <small><i class="bi bi-chat-left-text"></i> {{ comments }}</small>
+    </div>
+</div>
+{% endmacro %} 
